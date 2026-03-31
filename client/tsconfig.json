@@ -10,7 +10,7 @@
     "module": "esnext",
     "moduleResolution": "node",
 
-    "ignoreDeprecations": "6.0",   ← ADD THIS LINE
+    "ignoreDeprecations": "6.0",  
 
     "resolveJsonModule": true,
     "allowJs": true,
