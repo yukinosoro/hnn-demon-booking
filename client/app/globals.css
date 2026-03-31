@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(132deg, #02040f 18%, #040c1d 40%, #090f2b 65%, #000 100%);
+  color: #e5f2ff;
+  min-height: 100vh;
+  font-family: 'Inter', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.anime-background {
+  background: radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.24), transparent 35%),
+    radial-gradient(circle at 80% 30%, rgba(139, 92, 246, 0.2), transparent 35%),
+    radial-gradient(circle at 50% 80%, rgba(236, 72, 153, 0.14), transparent 42%),
+    linear-gradient(132deg, #02040f 0%, #050a1d 40%, #020712 70%, #000 100%);
+  animation: glowBackground 26s ease-in-out infinite;
+}
+
+@keyframes glowBackground {
+  0%, 100% {
+    background-position: 20% 20%, 80% 30%, 50% 80%, 50% 50%;
+  }
+  50% {
+    background-position: 16% 22%, 82% 32%, 48% 76%, 50% 50%;
+  }
+}
+
+.card-glass {
+  background: rgba(7, 16, 37, 0.61);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  box-shadow: 0 8px 24px rgba(6, 10, 29, 0.6), 0 0 14px rgba(56, 189, 248, 0.25);
+  backdrop-filter: blur(14px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-glass:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(6, 10, 29, 0.7), 0 0 18px rgba(56, 189, 248, 0.35);
+}
+
+.btn-glow {
+  background: linear-gradient(90deg, #38bdf8 0%, #6366f1 50%, #0ea5e9 100%);
+  color: #ffffff;
+  border: 1px solid rgba(114, 122, 255, 0.4);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 22px rgba(56, 189, 248, 0.7), 0 0 16px rgba(119, 90, 242, 0.45);
+}
+
+input,
+select,
+textarea {
+  background: rgba(6, 14, 34, 0.82);
+  border: 1px solid rgba(6, 82, 213, 0.3);
+  color: #dbeafe;
+  border-radius: 1rem;
+  padding: 0.7rem 0.85rem;
+  transition: all 0.3s ease;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: rgba(56, 189, 248, 0.58);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: rgba(56, 189, 248, 0.9);
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.24);
+}
+
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.5s ease-out forwards;
+}
+
+.shadow-glow-green {
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.45), 0 0 32px rgba(34, 197, 94, 0.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.5s ease-out;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Button transitions */
+button {
+  transition: all 0.3s ease;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Input focus styles */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Card shadow */
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
