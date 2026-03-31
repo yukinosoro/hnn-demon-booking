@@ -9,6 +9,9 @@
     "jsx": "preserve",
     "module": "esnext",
     "moduleResolution": "node",
+
+    "ignoreDeprecations": "6.0",   ← ADD THIS LINE
+
     "resolveJsonModule": true,
     "allowJs": true,
     "strict": false,
@@ -28,14 +31,5 @@
         "name": "next"
       }
     ]
-  },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  }
 }
